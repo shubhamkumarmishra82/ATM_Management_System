@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+#  ATM Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  Overview
 
-## Available Scripts
+The ATM Management System is a banking application that allows users to create an account, log in securely, and perform essential banking operations.
+This project simulates real-world ATM functionality with authentication and transaction management features.
 
-In the project directory, you can run:
+##Features
 
-### `npm start`
+### Authentication System
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Sign Up – New users can create an account by registering their details.
+* Sign In / Login** – Existing users can log in using:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  * Account Number
+  * PIN (secure authentication)
 
-### `npm test`
+If a user does not have an account, then they can create an account by filling the details
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 Dashboard
 
-### `npm run build`
+After successful login, the user is redirected to the **Dashboard**, where they can perform quick banking operations.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###  Quick Operations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Debit** – Withdraw money from the account.
+* **Credit** – Deposit money into the account.
+* **Transfer** – Transfer money to another account.
+* **Check History** – View transaction history.
+* **Logout** – Securely exit the system.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##  System Workflow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. User opens the application.
+2. If the user does not have an account → Register (Sign Up).
+3. If the user already has an account → Login using account number & PIN.
+4. After successful authentication → Navigate to Dashboard.
+5. Perform banking operations.
+6. Logout securely.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##  Security Features
 
-## Learn More
+* PIN-based authentication
+* Controlled access to dashboard after login
+* Secure logout functionality
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##  Technologies Used
 
-### Code Splitting
+fronted : HTML , CSS , JS , REACT
+database : MYSQL 
+backend : java spring boot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ If you like this project, feel free to give it a star!
