@@ -1,0 +1,50 @@
+/* Full screen center for login card */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ 
+  background: linear-gradient(135deg, #d4edda, #e2f3e5);
+  padding-top: 60px; 
+}
+
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  animation: slideFade 0.8s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #198754; 
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 576px) {
+  .login-card {
+    margin: 0 15px;
+  }
+}

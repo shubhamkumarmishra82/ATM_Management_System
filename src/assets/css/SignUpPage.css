@@ -1,0 +1,36 @@
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background: linear-gradient(135deg, #d4edda, #e2f3e5);
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  animation: fadeSlideUp 0.9s ease;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #198754;
+}
+
+@media (max-width: 576px) {
+  .signup-card {
+    margin: 0 15px;
+  }
+}

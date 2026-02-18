@@ -1,0 +1,65 @@
+/* Hero Section */
+.security-hero {
+  background: linear-gradient(135deg, #198754, #52b788); /* gradient green */
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 0 0 50% 50% / 10%; /* curved bottom edge */
+}
+
+.security-hero h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.security-hero p.lead {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.feature-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #0f3460;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .security-hero h2 {
+    font-size: 2.2rem;
+  }
+  .feature-card h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .security-hero h2 {
+    font-size: 1.8rem;
+  }
+}
