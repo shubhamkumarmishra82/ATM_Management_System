@@ -7,7 +7,7 @@ export default function Navbar(){
   <div className="container-fluid">
 
     
-    <a className="navbar-brand" href="#">ATM Management System</a>
+    <a className="navbar-brand" href="/">ATM Management System</a>
 
     
     <button

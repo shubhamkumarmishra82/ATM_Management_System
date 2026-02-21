@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Transaction() {
@@ -8,7 +8,7 @@ export default function Transaction() {
  
   useEffect(() => {
     fetchTransactions();
-  }, []);
+  }, [accountNumber]);
 
   const fetchTransactions = async () => {
     try {
