@@ -1,31 +1,31 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Transaction() {
   const [transactions, setTransactions] = useState([]);
   const accountNumber = localStorage.getItem("accountNumber");
 
- 
   useEffect(() => {
-    fetchTransactions();
-  }, [accountNumber]);
-
-  const fetchTransactions = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:9090/transaction/history/${accountNumber}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setTransactions(data);
-      } else {
-        alert("Failed to fetch transaction history");
+    // fetchTransactions ko directly useEffect me define kar rahe hain
+    const fetchTransactions = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:9090/transaction/history/${accountNumber}`
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setTransactions(data);
+        } else {
+          alert("Failed to fetch transaction history");
+        }
+      } catch (error) {
+        console.log(error);
+        alert("Server error");
       }
-    } catch (error) {
-      console.log(error);
-      alert("Server error");
-    }
-  };
+    };
+
+    fetchTransactions();
+  }, [accountNumber]); // accountNumber ko dependency me daala, fetchTransactions warning nahi aayegi
 
   return (
     <div className="container mt-4">
@@ -35,7 +35,6 @@ export default function Transaction() {
         <table className="table table-striped table-hover text-center">
           <thead className="table-success">
             <tr>
-             
               <th scope="col">Type</th>
               <th scope="col">Amount (₹)</th>
               <th scope="col">Date & Time</th>
@@ -48,7 +47,6 @@ export default function Transaction() {
             {transactions.length > 0 ? (
               transactions.map((tx, index) => (
                 <tr key={index}>
-                
                   <td>{tx.transactionType}</td>
                   <td>{tx.amount}</td>
                   <td>{new Date(tx.created).toLocaleString()}</td>
@@ -59,7 +57,7 @@ export default function Transaction() {
               ))
             ) : (
               <tr>
-                <td colSpan="7" className="text-center">
+                <td colSpan="6" className="text-center">
                   No transactions found
                 </td>
               </tr>
@@ -68,7 +66,6 @@ export default function Transaction() {
         </table>
       </div>
 
-      {/* Button at the bottom center */}
       <div className="mt-3 d-flex justify-content-center">
         <NavLink to="/dashboard" className="btn btn-success">
           Back to Dashboard
